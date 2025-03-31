@@ -1,6 +1,7 @@
-let tasks = [];
 
 function addTask() {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [] 
+
     let taskInput = document.getElementById("taskInput");
     let taskTime = document.getElementById("taskTime");
     let taskText = taskInput.value.trim();
@@ -13,6 +14,7 @@ function addTask() {
 
     let task = { text: taskText, due: new Date(taskDue), id: Date.now() };
     tasks.push(task);
+    localStorage.setItem("tasks", JSON.stringify(tasks))
     renderTasks();
     scheduleReminder(task);
     
@@ -21,6 +23,7 @@ function addTask() {
 }
 
 function renderTasks() {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [] 
     let taskList = document.getElementById("taskList");
     taskList.innerHTML = "";
     tasks.forEach(task => {
@@ -32,7 +35,9 @@ function renderTasks() {
 }
 
 function removeTask(id) {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [] 
     tasks = tasks.filter(task => task.id !== id);
+    localStorage.setItem("tasks", JSON.stringify(tasks))
     renderTasks();
 }
 
