@@ -46,3 +46,9 @@ function scheduleReminder(task) {
 }
 
 renderTasks();
+
+function saveData(){
+    let data = document.getElementById("userInput").value;
+    localStorage.setItem("savedData", data); // Save data to localStorage
+    window.location.href = "/NAV-LINKS/list.html"; // Redirect to another page
+}

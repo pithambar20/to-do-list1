@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/NAV-LINKS/list.css">
     <title>To-Do-List</title>
 </head>
 <body>
@@ -11,23 +11,18 @@
     
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html"><h1 class="nav-heading">GOLDEN DAWN</h1></a>
+            <a href="../index.html"><h1 class="nav-heading">GOLDEN DAWN</h1></a>
             <ul class="nav-links">                
                 <li><a href="/NAV-LINKS/about.html">About</a></li>
                 <li><a href="/NAV-LINKS/contact.html">Contact</a></li>
-                <li><a href="/NAV-LINKS/list.html">List</a></li>
+                
             </ul>
         </div>
     </nav>
     
     <main>
-        <div class="container">
-            <h1 class="neon-text">To-Do List</h1> 
-            <input type="text" id="taskInput" placeholder="Add a new task...">
-            <input type="datetime-local" id="taskTime" class="glowing-calendar">
-            <button id="submit" onclick="addTask(); saveData();">Add Task</button>
-            <ul id="taskList"></ul>
-        </div>
+        
+        <p id="output"></p>
         
 
     </main>
@@ -35,9 +30,11 @@
         <p>&copy; 2025 thambar . All rights reserved.</p>
     </footer>
     
+   
     
     
-    <script src="script.js"></script>
-    
+    <script>
+        document.getElementById("output").innerText = localStorage.getItem("savedData") || "No data found!";
+    </script>
 </body>
 </html>
