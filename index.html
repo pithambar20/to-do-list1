@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do-List</title>
+</head>
+<body>
+    
+    
+    <main>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-heading">My To-Do List</h1>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1>To-Do List</h1>
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <input type="datetime-local" id="taskTime">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+    
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
