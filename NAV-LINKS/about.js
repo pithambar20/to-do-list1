@@ -7,7 +7,7 @@ function addTask() {
     if (taskText === '') return;
 
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    tasks.push({ text: taskText, datetime: taskDateTime });
+    tasks.push({ text: taskText, due: taskDateTime });
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
     loadTasks();

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/NAV-LINKS/list.css">
+    <link rel="stylesheet" href="./list.css">
     <title>To-Do-List</title>
 </head>
 <body>
@@ -13,8 +13,8 @@
         <div class="nav-container">
             <a href="../index.html"><h1 class="nav-heading">GOLDEN DAWN</h1></a>
             <ul class="nav-links">                
-                <li><a href="/NAV-LINKS/about.html">About</a></li>
-                <li><a href="/NAV-LINKS/contact.html">Contact</a></li>
+                <li><a href="./NAV-LINKS/about.html">About</a></li>
+                <li><a href="./NAV-LINKS/contact.html">Contact</a></li>
                 
             </ul>
         </div>
@@ -34,7 +34,7 @@
     
     
     <script>
-        document.getElementById("output").innerText = localStorage.getItem("savedData") || "No data found!";
+        document.getElementById("output").innerText = localStorage.getItem("tasks") || "No data found!";
     </script>
 </body>
 </html>

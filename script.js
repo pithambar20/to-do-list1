@@ -23,7 +23,9 @@ function addTask() {
 }
 
 function renderTasks() {
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [] 
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || []
+    console.log(tasks);
+    
     let taskList = document.getElementById("taskList");
     taskList.innerHTML = "";
     tasks.forEach(task => {
@@ -57,3 +59,5 @@ function saveData(){
     localStorage.setItem("savedData", data); // Save data to localStorage
     window.location.href = "/NAV-LINKS/list.html"; // Redirect to another page
 }
+
+window.onload = renderTasks;
