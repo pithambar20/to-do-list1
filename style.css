@@ -1,17 +1,41 @@
-.container{
-    display:flex;
-    flex-direction: column;
+
+
+.container {
+
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin:0
-    
-
+    flex-direction: column;
+    background-color: #f0f0f0;
+    margin-top: 300px;
+    height: 350px;
+    border-radius: 8px;
+    width: 350px;
+   
 }
+
+#taskInput{
+    border-radius: 20px;
+    height:30px;
+    width:75%;
+    box-sizing: border-box;
+}
+
+#taskTime{
+    border-radius: 20px;
+    height:30px;
+    max-width: 75%;
+}
+
+
 
 body{
     background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220610/pngtree-chalkboard-backdrop-with-chalked-todo-list-form-nobody-drawn-photo-image_31340962.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    
+    
+    
     
 }
 
@@ -56,6 +80,7 @@ body {
 .nav-heading {
     margin: 0;
     font-size: 1.5em;
+    color: white;
 }
 
 .nav-links {
@@ -80,15 +105,7 @@ body {
     background-color: #575757;
 }
 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 80px; /* Adjust margin to accommodate the navbar */
-    margin-bottom: 20px;
-}
+
 footer {
     background-color: #333;
     color: #fff;
